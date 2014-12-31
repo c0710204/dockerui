@@ -10,7 +10,7 @@
         </p>
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped table-hover">
          <tbody>
             <tr>
                 <td>Containers:</td>
@@ -46,4 +46,12 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-striped table-hover" >
+         <tbody>
+            <tr ng-repeat="item in info">
+                <td>{{item}}:</td>
+                <td>{{ info[item] }}</td>
+            </tr>
+        </tbody>
+    </table>    
 </div>
