@@ -9,7 +9,7 @@
             <strong>Go Version: </strong>{{ docker.GoVersion }}<br />
         </p>
     </div>
-
+    <h2>System Information</h2>
     <table class="table table-striped table-hover">
          <tbody>
             <tr>
@@ -46,11 +46,12 @@
             </tr>
         </tbody>
     </table>
+    <h2>Raw Information</h2>
     <table class="table table-striped table-hover" >
          <tbody>
             <tr ng-repeat="item in info">
-                <td>{{item}}:</td>
-                <td>{{ info[item] }}</td>
+                <td>{{$index}}:</td>
+                <td>{{item}}</td>
             </tr>
         </tbody>
     </table>    
