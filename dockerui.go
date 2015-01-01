@@ -72,7 +72,7 @@ func createHandler(dir string, e string) http.Handler {
 		fileHandler = http.FileServer(http.Dir(dir))
 		h           http.Handler
 	)
-
+    //handle sock
 	if strings.Contains(e, "http") {
 		h = createTcpHandler(e)
 	} else {
@@ -84,8 +84,12 @@ func createHandler(dir string, e string) http.Handler {
 		}
 		h = createUnixHandler(e)
 	}
-
+    //router
+    //-dockerapi
 	mux.Handle("/dockerapi/", http.StripPrefix("/dockerapi", h))
+    //-systemapi
+	//mux.Handle("/systemapi/", http.StripPrefix("/systemapi", h))
+    //-static
 	mux.Handle("/", fileHandler)
 	return mux
 }

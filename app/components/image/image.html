@@ -21,43 +21,43 @@
 
     <table class="table table-striped">
          <tbody>
-            <tr np-show="image.created">
+            <tr np-show="image.created!=undifined&&image.created!=null">
                 <td>Created:</td>
                 <td>{{ image.created }}</td>
             </tr>
-            <tr np-show="image.created">
+            <tr np-show="image.parent!=undifined&&image.parent!=null">
                 <td>Parent:</td>
                 <td><a href="#/images/{{ image.parent }}/">{{ image.parent }}</a></td>
             </tr>
-            <tr np-show="image.created">
+            <tr np-show="image.Size!=undifined&&image.Size!=null">
                 <td>Size:</td>
                 <td>{{ image.Size|humansize }}</td>
             </tr>
-            <tr np-show="image.created">
+            <tr np-show="image.VirtualSize!=undifined&&image.VirtualSize!=null">
                 <td>Virtual Size</td>
                 <td>{{ image.VirtualSize|humansize }}</td>
             </tr>
-            <tr np-show="image.ContainerConfig.Hostname">
+            <tr np-show="image.ContainerConfig.Hostname!=undifined&&image.ContainerConfig.Hostname!=null">
                 <td>Hostname:</td>
                 <td>{{ image.ContainerConfig.Hostname }}</td>
             </tr>
-            <tr np-show="image.ContainerConfig.User">
+            <tr np-show="image.ContainerConfig.User!=undifined&&image.ContainerConfig.User!=null">
                 <td>User:</td>
                 <td>{{ image.ContainerConfig.User }}</td>
             </tr>
-            <tr np-show="image.ContainerConfig.Cmd">
+            <tr np-show="image.ContainerConfig.Cmd!=undifined&&image.ContainerConfig.Cmd!=null">
                 <td>Cmd:</td>
                 <td>{{ image.ContainerConfig.Cmd }}</td>
             </tr>
-            <tr np-show="image.ContainerConfig.Volumes">
+            <tr np-show="image.ContainerConfig.Volumes!=undifined&&image.ContainerConfig.Volumes!=null">
                 <td>Volumes:</td>
                 <td>{{ image.ContainerConfig.Volumes }}</td>
             </tr>
-            <tr np-show="image.ContainerConfig.VolumesFrom">
+            <tr np-show="image.ContainerConfig.VolumesFrom!=undifined&&image.ContainerConfig.VolumesFrom!=null">
                 <td>Volumes from:</td>
                 <td>{{ image.ContainerConfig.VolumesFrom }}</td>
             </tr>
-            <tr np-show="image.Comment">
+            <tr np-show="image.Comment!=undifined&&image.Comment!=null">
                 <td>Comment:</td>
                 <td>{{ image.Comment }}</td>
             </tr>
