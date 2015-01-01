@@ -21,42 +21,45 @@
 
     <table class="table table-striped">
          <tbody>
-            <tr>
+            <tr np-show="image.created">
                 <td>Created:</td>
                 <td>{{ image.created }}</td>
             </tr>
-            <tr>
+            <tr np-show="image.created">
                 <td>Parent:</td>
                 <td><a href="#/images/{{ image.parent }}/">{{ image.parent }}</a></td>
             </tr>
-            <tr>
+            <tr np-show="image.created">
                 <td>Size:</td>
                 <td>{{ image.Size|humansize }}</td>
             </tr>
-
-            <tr>
+            <tr np-show="image.created">
+                <td>Virtual Size</td>
+                <td>{{ image.VirtualSize|humansize }}</td>
+            </tr>
+            <tr np-show="image.ContainerConfig.Hostname">
                 <td>Hostname:</td>
-                <td>{{ image.container_config.Hostname }}</td>
+                <td>{{ image.ContainerConfig.Hostname }}</td>
             </tr>
-            <tr>
+            <tr np-show="image.ContainerConfig.User">
                 <td>User:</td>
-                <td>{{ image.container_config.User }}</td>
+                <td>{{ image.ContainerConfig.User }}</td>
             </tr>
-            <tr>
+            <tr np-show="image.ContainerConfig.Cmd">
                 <td>Cmd:</td>
-                <td>{{ image.container_config.Cmd }}</td>
+                <td>{{ image.ContainerConfig.Cmd }}</td>
             </tr>
-            <tr>
+            <tr np-show="image.ContainerConfig.Volumes">
                 <td>Volumes:</td>
-                <td>{{ image.container_config.Volumes }}</td>
+                <td>{{ image.ContainerConfig.Volumes }}</td>
             </tr>
-            <tr>
+            <tr np-show="image.ContainerConfig.VolumesFrom">
                 <td>Volumes from:</td>
-                <td>{{ image.container_config.VolumesFrom }}</td>
+                <td>{{ image.ContainerConfig.VolumesFrom }}</td>
             </tr>
-            <tr>
+            <tr np-show="image.Comment">
                 <td>Comment:</td>
-                <td>{{ image.comment }}</td>
+                <td>{{ image.Comment }}</td>
             </tr>
 
         </tbody>
