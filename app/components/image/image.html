@@ -15,7 +15,7 @@
     <div>
        <h4>Containers created:</h4>
        <canvas id="containers-started-chart" width="750">
-                Get a better broswer... Your holding everyone back.
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
        </canvas>
     </div>
 
@@ -23,15 +23,15 @@
          <tbody>
             <tr np-show="image.created!=undifined&&image.created!=null">
                 <td>Created:</td>
-                <td>{{ image.created }}</td>
+                <td>{{ image.Created }}</td>
             </tr>
             <tr np-show="image.parent!=undifined&&image.parent!=null">
                 <td>Parent:</td>
-                <td><a href="#/images/{{ image.parent }}/">{{ image.parent }}</a></td>
+                <td><a href="#/images/{{ image.Parent }}/">{{ image.Parent }}</a></td>
             </tr>
-            <tr np-show="image.Size!=undifined&&image.Size!=null">
-                <td>Size:</td>
-                <td>{{ image.Size|humansize }}</td>
+            <tr>
+                <td>Size (Virtual Size):</td>
+                <td>{{ image.Size|humansize }} ({{ image.VirtualSize|humansize }})</td>
             </tr>
             <tr np-show="image.VirtualSize!=undifined&&image.VirtualSize!=null">
                 <td>Virtual Size</td>
@@ -57,9 +57,9 @@
                 <td>Volumes from:</td>
                 <td>{{ image.ContainerConfig.VolumesFrom }}</td>
             </tr>
-            <tr np-show="image.Comment!=undifined&&image.Comment!=null">
-                <td>Comment:</td>
-                <td>{{ image.Comment }}</td>
+            <tr>
+                <td>Built with:</td>
+                <td>Docker {{ image.DockerVersion }} on {{ image.Os}}, {{ image.Architecture }}</td>
             </tr>
 
         </tbody>
